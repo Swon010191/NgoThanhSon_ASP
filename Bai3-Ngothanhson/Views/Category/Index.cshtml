@@ -49,5 +49,24 @@
                 </td>
             </tr>
         }
+        <h1>Category</h1>
+        <form asp-controller="Product" asp-action="Index" method="get">
+            <label for="categoryId">Chọn Category:</label>
+
+            <select id="categoryId" name="categoryID" class="form-select">
+                <option value="">-- Chọn Category --</option>
+
+                @foreach (var item in Model)
+                {
+                    <option value="@item.Id">
+                        @item.Name
+                    </option>
+                }
+            </select>
+
+            <button type="submit" class="btn btn-primary mt-2">
+                Xem Products
+            </button>
+        </form>
     </tbody>
 </table>
