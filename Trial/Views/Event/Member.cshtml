@@ -1,0 +1,8 @@
+﻿@{
+    var list = (List<string>)ViewData["list"];
+    foreach(var l in list)
+    {
+        <p>@l</p>
+    }
+}
+<partial name="_EventFooter" />

@@ -6,7 +6,14 @@ namespace Bai3_Ngothanhson.Controllers
 {
     public class CategoryController : Controller
     {
+        //Ilogger<categoryController> _logger;
+        private readonly ILogger<CategoryController> _logger;
         // GET: Category
+        public CategoryController(ILogger<CategoryController> logger)
+        {
+            _logger = logger;
+        }
+
         public ActionResult Index()
         {
             return View(SeedData.categories);
